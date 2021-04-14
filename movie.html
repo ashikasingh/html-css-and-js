@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Moviesync assignment</title>
+<body>
+<table id=btn width=100%></table>
+</script>
+
+<button type="button" id="updateButton" class="btn btn" onclick="InfoUpdate();">Add user</button>
+function InfoUpdate() {
+    if ($("#Name").val() != null && $("#Name").val() != '') {
+          AddToTable();
+        formClear();
+        $("#Name").focus();
+    }
+ if ($("#Id").val() != null && $("#Id").val() != '') {
+          AddToTable();
+        formClear();
+        $("#Id").focus();
+    }
+ if ($("#City").val() != null && $("#City").val() != '') {
+          AddToTable();
+        formClear();
+        $("#City").focus();
+    }
+ if ($("#Degree").val() != null && $("#Degree").val() != '') {
+          AddToTable();
+        formClear();
+        $("#Degree").focus();
+    }
+ if ($("#Timestamp").val() != null && $("#Timestamp").val() != '') {
+          AddToTable();
+        formClear();
+        $("#Timestamp").focus();
+    }
+}
+function AddToTable() {
+    // First check if a <tbody> tag exists, add one if not
+    if ($("#Table tbody").length == 0) {
+        $("#Table").append("<tbody></tbody>");
+    }
+
+    $("#Table tbody").append("<tr>" +
+        "<td>" + $("#Name").val() + "</td>" +
+        "<td>" + $("#Id").val() + "</td>" +
+        "<td>" + $("#City").val() + "</td>" +
+ "<td>" + $("#Degree").val() + "</td>" +
+ "<td>" + $("#Timestamp").val() + "</td>" +
+        "</tr>");
+}
+function formClear() {
+    $("#Name").val("");
+    $("#Id").val("");
+    $("#City").val("");
+     $("#Degree").val("");
+ $("#Timestamp").val("");
+}
+</script>
+</body>
+</html>
